@@ -16,11 +16,11 @@ export default DS.Model.extend({
     assistant: DS.attr('String'),
     costume: DS.attr('String'),
     makeup: DS.attr('String'),
-    builders: DS.attr('String'),
+    build: DS.attr('String'),
     tech: DS.attr('String'),
     design: DS.attr('String'),
-    helpers: DS.attr('String'),
-    sales: DS.attr('Sring'),
+    helper: DS.attr('String'),
+    sales: DS.attr('String'),
     eveningSales: DS.attr('String'),
     pdfLink: DS.attr('String')
 });
