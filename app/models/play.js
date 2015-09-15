@@ -4,7 +4,7 @@ export default DS.Model.extend({
     title: DS.attr('String'),
     subtitle: DS.attr('String'),
     description: DS.attr('String'),
-    year: DS.attr('Date'),
+    year: DS.attr('Number'),
     location: DS.attr('String'),
     picture: DS.attr('String'),
     //Playdates

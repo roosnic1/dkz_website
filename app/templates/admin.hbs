@@ -1,151 +1,171 @@
 
-<h1>Admin</h1>
+<h1>DKZ Admin</h1>
 
 <h2>Plays</h2>
+
+{{#if playToEdit}}
+
 <h3>New Play</h3>
 <form class="form-horizontal">
 	<div class="form-group">
 		<label for="inputPlayTitle" class="col-sm-2 control-label">Title</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayTitle" placeholder="Title" value=nplay.title}}
+			{{input type="text" class="form-control" id="inputPlayTitle" placeholder="Title" value=playToEdit.title}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlaySubtitle" class="col-sm-2 control-label">Subtitle</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlaySubtitle" placeholder="Subtitle" value=nplay.subtitle}}
+			{{input type="text" class="form-control" id="inputPlaySubtitle" placeholder="Subtitle" value=playToEdit.subtitle}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayDescription" class="col-sm-2 control-label">Description</label>
 		<div class="col-sm-10">
-			{{textarea class="form-control" rows="3" id="inputPlayDescription" placeholder="Description" value=nplay.description}}
+			{{textarea class="form-control" rows="3" id="inputPlayDescription" placeholder="Description" value=playToEdit.description}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayYear" class="col-sm-2 control-label">Year</label>
 		<div class="col-sm-10">
-			{{input type="date" class="form-control" id="inputPlayYear" placeholder="Year" value=nplay.year}}
+			{{input type="text" class="form-control" id="inputPlayYear" placeholder="Year" value=playToEdit.year}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayLocation" class="col-sm-2 control-label">Location</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayLocation" placeholder="Location" value=nplay.location}}
+			{{input type="text" class="form-control" id="inputPlayLocation" placeholder="Location" value=playToEdit.location}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayPicture" class="col-sm-2 control-label">Picture</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayPicture" placeholder="Picture" value=nplay.picture}}
+			{{input type="text" class="form-control" id="inputPlayPicture" placeholder="Picture" value=playToEdit.picture}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayDirector" class="col-sm-2 control-label">Director</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayDirector" placeholder="Director" value=nplay.director}}
+			{{input type="text" class="form-control" id="inputPlayDirector" placeholder="Director" value=playToEdit.director}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayWriter" class="col-sm-2 control-label">Writer</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayWriter" placeholder="Writer" value=nplay.writer}}
+			{{input type="text" class="form-control" id="inputPlayWriter" placeholder="Writer" value=playToEdit.writer}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayOrgWriter" class="col-sm-2 control-label">Original Writer</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayOrgWriter" placeholder="Original Writer" value=nplay.orgWriter}}
+			{{input type="text" class="form-control" id="inputPlayOrgWriter" placeholder="Original Writer" value=playToEdit.orgWriter}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayMusic" class="col-sm-2 control-label">Music</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayMusic" placeholder="Music" value=nplay.music}}
+			{{input type="text" class="form-control" id="inputPlayMusic" placeholder="Music" value=playToEdit.music}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayActors" class="col-sm-2 control-label">Actors</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayActors" placeholder="Actors" value=nplay.actors}}
+			{{input type="text" class="form-control" id="inputPlayActors" placeholder="Actors" value=playToEdit.actors}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayAssistant" class="col-sm-2 control-label">Assistant</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayAssistant" placeholder="Assistant" value=nplay.assistant}}
+			{{input type="text" class="form-control" id="inputPlayAssistant" placeholder="Assistant" value=playToEdit.assistant}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayCostume" class="col-sm-2 control-label">Costume</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayCostume" placeholder="Costume" value=nplay.costume}}
+			{{input type="text" class="form-control" id="inputPlayCostume" placeholder="Costume" value=playToEdit.costume}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayMakeup" class="col-sm-2 control-label">Makeup</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayMakeup" placeholder="Makeup" value=nplay.makeup}}
+			{{input type="text" class="form-control" id="inputPlayMakeup" placeholder="Makeup" value=playToEdit.makeup}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayBuild" class="col-sm-2 control-label">Build</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayBuild" placeholder="Build" value=nplay.build}}
+			{{input type="text" class="form-control" id="inputPlayBuild" placeholder="Build" value=playToEdit.build}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayTech" class="col-sm-2 control-label">Tech</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayTech" placeholder="Tech" value=nplay.tech}}
+			{{input type="text" class="form-control" id="inputPlayTech" placeholder="Tech" value=playToEdit.tech}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayDesign" class="col-sm-2 control-label">Design</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayDesign" placeholder="Design" value=nplay.design}}
+			{{input type="text" class="form-control" id="inputPlayDesign" placeholder="Design" value=playToEdit.design}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayHelper" class="col-sm-2 control-label">Helper</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayHelper" placeholder="Helper" value=nplay.helper}}
+			{{input type="text" class="form-control" id="inputPlayHelper" placeholder="Helper" value=playToEdit.helper}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlaySales" class="col-sm-2 control-label">Sales</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlaySales" placeholder="Sales" value=nplay.sales}}
+			{{input type="text" class="form-control" id="inputPlaySales" placeholder="Sales" value=playToEdit.sales}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayEveningSales" class="col-sm-2 control-label">Evening Sales</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayEveningSales" placeholder="Evening Sales" value=nplay.eveningSales}}
+			{{input type="text" class="form-control" id="inputPlayEveningSales" placeholder="Evening Sales" value=playToEdit.eveningSales}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputPlayPdfLink" class="col-sm-2 control-label">PDF Link</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayPdfLink" placeholder="PDF Link" value=nplay.pdfLink}}
+			{{input type="text" class="form-control" id="inputPlayPdfLink" placeholder="PDF Link" value=playToEdit.pdfLink}}
 		</div>
 	</div>
 </form>
 <div class="row">
 	<div class="col-sm-offset-2 col-sm-2">
-		<button type="submit" class="btn btn-primary" {{action "savePlay"}}>Save</button>
+		<button class="btn btn-primary" {{action "savePlay"}}>Save</button>
+		<button class="btn btn-primary" {{action "deletePlay" playToEdit}}>Cancel</button>
 	</div>
 </div>
 
-<h3>All Plays</h3>
-<ul>
+{{else}}
+	<button class="btn btn-primary" {{action "addPlay"}}>Add Play</button>
+{{/if}}
+
+<h4>Playlist</h4>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Year</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
 	{{#each model.plays as |play|}}
-		<li>{{ play.title }} </li>
+		<tr>
+			<td>{{play.title}}</td>
+			<td>{{play.year}}</td>
+			<td><button class="btn btn-primary" {{action "editPlay" play}}>Edit</button></td>
+			<td><button class="btn btn-danger" {{action "deletePlay" play}}>Delete</button></td>
+		</tr>
 	{{/each}}
-</ul>
-
-
-<button type="submit" class="btn btn-primary" {{action "testAction"}}>Test Action</button>
+	</tbody>
+</table>
 
 
 {{outlet}}
