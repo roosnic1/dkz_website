@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
 	playToEdit: null,
+	memberToEdit: null,
 
 	init: function() {
 		this._super();
@@ -10,31 +11,31 @@ export default Ember.Controller.extend({
 
 
 	actions: {
-		addPlay: function() {
-			var nplay = this.store.createRecord('play',{})
-			this.set('playToEdit',nplay);
+		add: function(type) {
+			var nType = this.store.createRecord(type,{});
+			this.set(type+'ToEdit',nType);
 		},
-		savePlay: function() {
+		save: function(type) {
 			// TODO: validate play edits
 
 			var self = this;
-			this.get('playToEdit').save().then(function() {
-				self.set('playToEdit',null);
-				console.log('Saved Play');
+			this.get(type+'ToEdit').save().then(function() {
+				self.set(type+'ToEdit',null);
+				console.log('Saved ' + type);
 			}, function(err) {
-				console.warn('Could not save Play',err);
+				console.warn('Could not save ' + type,err);
 			});
 		},
-		editPlay: function(play) {
-			this.set('playToEdit',play);
+		edit: function(type,item) {
+			this.set(type+'ToEdit',item);
 		},
-		deletePlay: function(play) {
+		delete: function(type,item) {
 			var self = this;
-			play.destroyRecord().then(function() {
+			item.destroyRecord().then(function() {
 				console.log('Deleted Play');
-				self.set('playToEdit',null)
+				self.set(type+'ToEdit',null)
 			}, function(err) {
-				console.warn('Could not delete Play',err);
+				console.warn('Could not delete ' + type,err);
 			});
 		},
 		testAction: function() {
