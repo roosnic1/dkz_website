@@ -44,5 +44,18 @@ export default Ember.Component.extend({
     },
 
 
+    actions: {
+    	delete: function(image) {
+    		console.log(image);
+    		this.get('model.images').removeObject(image);
+    		this.get('model').save().then(function() {
+    			image.destroyRecord().then(function() {
+	    			console.log('Image deleted');
+	    		});
+    		});
+    	}
+    }
+
+
 
 })

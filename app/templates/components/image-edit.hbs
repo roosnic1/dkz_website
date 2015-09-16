@@ -2,6 +2,9 @@
 {{#each model.images as |image|}}
 	<div class="col-md-3">
 		<div class="image-preview" style="background-image: url({{image.imgData}});"></div>
+		{{input type="text" placeholder="Name" value=image.name class="image-preview-input"}}
+		{{input type="text" placeholder="Description" value=image.description class="image-preview-input"}}
+		<td><button class="btn btn-danger" {{action "delete" image}}>Delete</button></td>
 	</div>
 {{/each}}
 	<div class="col-md-3">

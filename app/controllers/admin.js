@@ -18,13 +18,9 @@ export default Ember.Controller.extend({
 		save: function(type) {
 			// TODO: validate play edits
 			var self = this;
-
-			console.log(this.get(type+'ToEdit.images.length'))
-
 			this.get(type+'ToEdit').save().then(function() {
-				console.log(self.get(type+'ToEdit.images.length'));
+				// TODO: fix duplicate adding. Check github issue.
 				self.get(type+'ToEdit.images').forEach(function(item,index,length) {
-					console.log(item);
 					item.save();
 				});
 
@@ -52,7 +48,7 @@ export default Ember.Controller.extend({
 		},
 		addImgToPlay: function(base64) {
 			var img = this.store.createRecord('image',{
-				name: 'Image--',
+				name: '',
 				description: '',
 				createdAt: new Date().getTime(),
 				imgData: base64

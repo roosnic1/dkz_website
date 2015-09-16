@@ -6,3 +6,8 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+.image-preview-input {
+	width: 96%;
+	margin: 2%;
+}
