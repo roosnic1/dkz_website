@@ -1,0 +1,12 @@
+<div class="row">
+{{#each model.images as |image|}}
+	<div class="col-md-4">
+		<div>{{key}}</div>
+		<div class="image-preview" style="background-image: url({{image.imgData}});"></div>
+	</div>
+{{/each}}
+	<div class="col-md-4">
+		<div class="image-preview" style="background-color: red;"></div>
+	</div>
+</div>
+{{yield}}

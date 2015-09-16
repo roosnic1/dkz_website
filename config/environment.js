@@ -28,7 +28,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = {
       'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
-      'style-src': "'self' 'unsafe-inline'"
+      'style-src': "'self' 'unsafe-inline'",
+      'img-src': "'self' data:"
     };
   }
 

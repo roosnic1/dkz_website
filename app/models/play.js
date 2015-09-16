@@ -6,7 +6,7 @@ export default DS.Model.extend({
     description: DS.attr('String'),
     year: DS.attr('Number'),
     location: DS.attr('String'),
-    picture: DS.attr('String'),
+    images: DS.hasMany('image',{async: true}),
     //Playdates
     director: DS.attr('String'),
     writer: DS.attr('String'),

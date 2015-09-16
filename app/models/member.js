@@ -5,6 +5,6 @@ export default DS.Model.extend({
   func: DS.attr('String'),
   board: DS.attr('boolean'),
   description: DS.attr('String'),
-  image: DS.attr('String'),
+  images: DS.hasMany('image',{async: true}),
   mail: DS.attr('String')
 });
