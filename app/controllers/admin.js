@@ -29,13 +29,15 @@ export default Ember.Controller.extend({
 		edit: function(type,item) {
 			this.set(type+'ToEdit',item);
 		},
-		delete: function(type,item) {
-			var self = this;
+		cancel: function(type,item) {
+			item.rollback();
+			this.set(type+'ToEdit',null);
+		},
+		delete: function(item) {
 			item.destroyRecord().then(function() {
-				console.log('Deleted Play');
-				self.set(type+'ToEdit',null)
+				console.log('Deleted item');
 			}, function(err) {
-				console.warn('Could not delete ' + type,err);
+				console.warn('Could not delete item',err);
 			});
 		},
 		testAction: function() {

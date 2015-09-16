@@ -137,7 +137,7 @@
 <div class="row">
 	<div class="col-sm-offset-2 col-sm-2">
 		<button class="btn btn-primary" {{action "save" "play"}}>Save</button>
-		<button class="btn btn-primary" {{action "delete" "play" playToEdit}}>Cancel</button>
+		<button class="btn btn-primary" {{action "cancel" "play" playToEdit}}>Cancel</button>
 	</div>
 </div>
 
@@ -161,7 +161,7 @@
 			<td>{{play.title}}</td>
 			<td>{{play.year}}</td>
 			<td><button class="btn btn-primary" {{action "edit" "play" play}}>Edit</button></td>
-			<td><button class="btn btn-danger" {{action "delete" "play" play}}>Delete</button></td>
+			<td><button class="btn btn-danger" {{action "delete" play}}>Delete</button></td>
 		</tr>
 	{{/each}}
 	</tbody>
@@ -216,7 +216,7 @@
 <div class="row">
 	<div class="col-sm-offset-2 col-sm-2">
 		<button class="btn btn-primary" {{action "save" "member"}}>Save</button>
-		<button class="btn btn-primary" {{action "delete" "member" memberToEdit}}>Cancel</button>
+		<button class="btn btn-primary" {{action "cancel" "member" memberToEdit}}>Cancel</button>
 	</div>
 </div>
 
@@ -240,7 +240,7 @@
 			<td>{{member.name}}</td>
 			<td>{{member.func}}</td>
 			<td><button class="btn btn-primary" {{action "edit" "member" member}}>Edit</button></td>
-			<td><button class="btn btn-danger" {{action "delete" "member" member}}>Delete</button></td>
+			<td><button class="btn btn-danger" {{action "delete" member}}>Delete</button></td>
 		</tr>
 	{{/each}}
 	</tbody>
