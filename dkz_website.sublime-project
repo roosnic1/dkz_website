@@ -1,0 +1,20 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+        "todoreview": {
+            "exclude_folders": [
+                "*.git*",
+                "bower_components",
+                "dist",
+                "node_modules",
+                "tmp",
+                "vendor"
+            ]
+        }
+    }
+}
