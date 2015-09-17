@@ -40,11 +40,24 @@ export default Ember.Controller.extend({
 			this.set(type+'ToEdit',null);
 		},
 		delete: function(item) {
+			item.get('images').forEach(function(item) {
+				item.destroyRecord();
+			});
+
 			item.destroyRecord().then(function() {
 				console.log('Deleted item');
 			}, function(err) {
 				console.warn('Could not delete item',err);
 			});
+		},
+		addImgToMember: function(base64) {
+			var img = this.store.createRecord('image',{
+				name: '',
+				description: '',
+				createdAt: new Date().getTime(),
+				imgData: base64
+			});
+			this.get('memberToEdit.images').addObject(img);
 		},
 		addImgToPlay: function(base64) {
 			var img = this.store.createRecord('image',{
@@ -54,10 +67,6 @@ export default Ember.Controller.extend({
 				imgData: base64
 			});
 			this.get('playToEdit.images').addObject(img);
-			console.log(base64);
-		},
-		testAction: function() {
-			console.log(this.get('model'));
 		}
 	}
 
