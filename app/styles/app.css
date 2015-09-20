@@ -1,3 +1,47 @@
+/* HEADER */
+
+body {
+	background-color: black;
+}
+
+header {
+	height: 130px;
+}
+
+.header-logo {
+	margin-top: 20px;
+	margin-left: 100px;
+	background-image: url('/assets/images/logo_white.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 90px;
+	width: 222px;
+	display: inline-block;
+}
+
+header ul {
+	display: inline-block;
+    float: right;
+    right: 0;
+    height: 90px;
+    margin-top: 20px;
+}
+
+header ul li {
+	margin-top: 10px;
+	display: inline-block;
+	list-style-type: none;
+	margin-right: 10px;
+	height: 90px;
+	line-height: 30px;
+	width: 200px;
+	font-size: 25px;
+	color: white;
+}
+
+
+
+
 .image-preview {
 	height: 150px;
     width: 150px;
