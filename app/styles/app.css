@@ -50,6 +50,16 @@ header .nav-element {
 
 
 
+/* Content Wrapper */
+
+.content-wrapper {
+	background-color: white;
+	border-radius: 25px;
+	padding: 25px;
+}
+
+
+
 
 
 
