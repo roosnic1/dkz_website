@@ -19,27 +19,43 @@ header {
 	display: inline-block;
 }
 
-header ul {
-	display: inline-block;
-    float: right;
-    right: 0;
-    height: 90px;
-    margin-top: 20px;
-}
-
-header ul li {
-	margin-top: 10px;
-	display: inline-block;
-	list-style-type: none;
-	margin-right: 10px;
-	height: 90px;
-	line-height: 30px;
-	width: 200px;
-	font-size: 25px;
+header .nav-element {
 	color: white;
+	height: 30px;
+	padding-top: 5px;
+	line-height: 20px;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	header .nav-element {
+		height: 90px;
+		padding-top: 30px;
+		line-height: 30px;
+		font-size: 16px;
+	}
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	header .nav-element {
+		height: 90px;
+		padding-top: 30px;
+		line-height: 30px;
+		font-size: 20px;
+	}
 }
 
 
+
+
+
+
+
+
+/* ADMIN */
 
 
 .image-preview {
