@@ -1,8 +1,7 @@
-import Ember from 'ember';
-import FirebaseAdapter from 'emberfire/adapters/firebase';
+import DS from 'ember-data';
+import ENV from '../config/environment';
 
-const { inject } = Ember;
-
-export default FirebaseAdapter.extend({
-  firebase: inject.service(),
+export default DS.RESTAdapter.extend({
+	host: ENV.backendURL,
+	namespace: 'api'
 });

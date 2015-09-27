@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'dkz-website',
     environment: environment,
-    firebase: 'https://dkzwebsite.firebaseio.com/',
+    backendURL: 'http://localhost:3000',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {
@@ -27,7 +27,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = {
-      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com",
+      'connect-src': "'self' http://localhost:3000",
       'style-src': "'self' 'unsafe-inline'",
       'img-src': "'self' data:"
     };
