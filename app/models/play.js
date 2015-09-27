@@ -5,22 +5,10 @@ export default DS.Model.extend({
     subtitle: DS.attr('String'),
     description: DS.attr('String'),
     year: DS.attr('Number'),
-    location: DS.attr('String'),
-    images: DS.hasMany('image',{async: true}),
-    //Playdates
     director: DS.attr('String'),
     writer: DS.attr('String'),
     orgWriter: DS.attr('String'),
     music: DS.attr('String'),
-    actors: DS.attr('String'),
-    assistant: DS.attr('String'),
-    costume: DS.attr('String'),
-    makeup: DS.attr('String'),
-    build: DS.attr('String'),
-    tech: DS.attr('String'),
-    design: DS.attr('String'),
-    helper: DS.attr('String'),
-    sales: DS.attr('String'),
-    eveningSales: DS.attr('String'),
-    pdfLink: DS.attr('String')
+    created: DS.attr('Date'),
+    updated: DS.attr('Date')
 });

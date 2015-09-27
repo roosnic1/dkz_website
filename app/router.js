@@ -9,6 +9,7 @@ Router.map(function() {
   this.route('plays');
   this.route('members');
   this.route('admin');
+  this.route('post');
 });
 
 export default Router;
