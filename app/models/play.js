@@ -9,6 +9,6 @@ export default DS.Model.extend({
     writer: DS.attr('String'),
     orgWriter: DS.attr('String'),
     music: DS.attr('String'),
-    created: DS.attr('Date'),
-    updated: DS.attr('Date')
+    created: DS.attr('Number'),
+    updated: DS.attr('Number')
 });

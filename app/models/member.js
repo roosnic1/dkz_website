@@ -5,6 +5,6 @@ export default DS.Model.extend({
   mail: DS.attr('String'),
   description: DS.attr('String'),
   image: DS.attr('String'),
-  created: DS.attr('Date'),
-  updated: DS.attr('Date')
+  created: DS.attr('Number'),
+  updated: DS.attr('Number')
 });
