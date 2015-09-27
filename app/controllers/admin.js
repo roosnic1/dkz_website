@@ -4,6 +4,7 @@ export default Ember.Controller.extend({
 
 	playToEdit: null,
 	memberToEdit: null,
+	postToEdit: null,
 
 	init: function() {
 		this._super();
@@ -12,22 +13,19 @@ export default Ember.Controller.extend({
 
 	actions: {
 		add: function(type) {
-			var nType = this.store.createRecord(type,{});
+			var nType = this.store.createRecord(type,{
+				created: new Date().getTime(),
+				updated: new Date().getTime()
+			});
 			this.set(type+'ToEdit',nType);
 		},
 		save: function(type) {
-			// TODO: validate play edits
+			// TODO: validate edits bevore save
 			var self = this;
-			this.get(type+'ToEdit').save().then(function() {
-				// TODO: fix duplicate adding. Check github issue.
-				self.get(type+'ToEdit.images').forEach(function(item,index,length) {
-					item.save();
-				});
-
+			var toSave = this.get(type+'ToEdit');
+			toSave.set('updated',new Date().getTime());
+			toSave.save().then(function() {
 				self.set(type+'ToEdit',null);
-
-				console.log('Saved ' + type);
-
 			}, function(err) {
 				console.warn('Could not save ' + type,err);
 			});
@@ -40,17 +38,13 @@ export default Ember.Controller.extend({
 			this.set(type+'ToEdit',null);
 		},
 		delete: function(item) {
-			item.get('images').forEach(function(item) {
-				item.destroyRecord();
-			});
-
 			item.destroyRecord().then(function() {
 				console.log('Deleted item');
 			}, function(err) {
 				console.warn('Could not delete item',err);
 			});
-		},
-		addImgToMember: function(base64) {
+		}
+		/*addImgToMember: function(base64) {
 			var img = this.store.createRecord('image',{
 				name: '',
 				description: '',
@@ -67,7 +61,7 @@ export default Ember.Controller.extend({
 				imgData: base64
 			});
 			this.get('playToEdit.images').addObject(img);
-		}
+		}*/
 	}
 
 

@@ -32,16 +32,6 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="inputPlayLocation" class="col-sm-2 control-label">Location</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayLocation" placeholder="Location" value=playToEdit.location}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Images</label>
-		{{image-edit model=playToEdit action="addImgToPlay"}}
-	</div>
-	<div class="form-group">
 		<label for="inputPlayDirector" class="col-sm-2 control-label">Director</label>
 		<div class="col-sm-10">
 			{{input type="text" class="form-control" id="inputPlayDirector" placeholder="Director" value=playToEdit.director}}
@@ -63,72 +53,6 @@
 		<label for="inputPlayMusic" class="col-sm-2 control-label">Music</label>
 		<div class="col-sm-10">
 			{{input type="text" class="form-control" id="inputPlayMusic" placeholder="Music" value=playToEdit.music}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayActors" class="col-sm-2 control-label">Actors</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayActors" placeholder="Actors" value=playToEdit.actors}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayAssistant" class="col-sm-2 control-label">Assistant</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayAssistant" placeholder="Assistant" value=playToEdit.assistant}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayCostume" class="col-sm-2 control-label">Costume</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayCostume" placeholder="Costume" value=playToEdit.costume}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayMakeup" class="col-sm-2 control-label">Makeup</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayMakeup" placeholder="Makeup" value=playToEdit.makeup}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayBuild" class="col-sm-2 control-label">Build</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayBuild" placeholder="Build" value=playToEdit.build}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayTech" class="col-sm-2 control-label">Tech</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayTech" placeholder="Tech" value=playToEdit.tech}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayDesign" class="col-sm-2 control-label">Design</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayDesign" placeholder="Design" value=playToEdit.design}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayHelper" class="col-sm-2 control-label">Helper</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayHelper" placeholder="Helper" value=playToEdit.helper}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlaySales" class="col-sm-2 control-label">Sales</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlaySales" placeholder="Sales" value=playToEdit.sales}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayEveningSales" class="col-sm-2 control-label">Evening Sales</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayEveningSales" placeholder="Evening Sales" value=playToEdit.eveningSales}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputPlayPdfLink" class="col-sm-2 control-label">PDF Link</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPlayPdfLink" placeholder="PDF Link" value=playToEdit.pdfLink}}
 		</div>
 	</div>
 </form>
@@ -170,7 +94,7 @@
 
 {{#if memberToEdit}}
 
-<h3>New Play</h3>
+<h3>New Member</h3>
 <form class="form-horizontal">
 	<div class="form-group">
 		<label for="inputMemberName" class="col-sm-2 control-label">Name</label>
@@ -179,33 +103,15 @@
 		</div>
 	</div>
 	<div class="form-group">
-		<label for="inputMemberBoard" class="col-sm-2 control-label">Board</label>
+		<label for="inputMemberMail" class="col-sm-2 control-label">Mail</label>
 		<div class="col-sm-10">
-			<label>
-				{{input id="inputMemberBoard" type="checkbox" checked=memberToEdit.board}}
-			</label>
-		</div>
-	</div>
-	<div class="form-group">
-		<label for="inputMemberFunc" class="col-sm-2 control-label">Function</label>
-		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputMemberFunc" placeholder="Function" value=memberToEdit.func}}
+			{{input type="email" class="form-control" id="inputMemberMail" placeholder="Mail" value=memberToEdit.mail}}
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="inputMemberDescription" class="col-sm-2 control-label">Description</label>
 		<div class="col-sm-10">
 			{{textarea class="form-control" rows="3" id="inputMemberDescription" placeholder="Description" value=memberToEdit.description}}
-		</div>
-	</div>
-	<div class="form-group">
-		<label class="col-sm-2 control-label">Images</label>
-		{{image-edit model=memberToEdit action="addImgToMember"}}
-	</div>
-	<div class="form-group">
-		<label for="inputMemberMail" class="col-sm-2 control-label">Mail</label>
-		<div class="col-sm-10">
-			{{input type="email" class="form-control" id="inputMemberMail" placeholder="Mail" value=memberToEdit.mail}}
 		</div>
 	</div>
 </form>
@@ -225,7 +131,7 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Function</th>
+			<th>Mail</th>
 			<th>Edit</th>
 			<th>Delete</th>
 		</tr>
@@ -234,9 +140,69 @@
 	{{#each model.members as |member|}}
 		<tr>
 			<td>{{member.name}}</td>
-			<td>{{member.func}}</td>
+			<td>{{member.mail}}</td>
 			<td><button class="btn btn-primary" {{action "edit" "member" member}}>Edit</button></td>
 			<td><button class="btn btn-danger" {{action "delete" member}}>Delete</button></td>
+		</tr>
+	{{/each}}
+	</tbody>
+</table>
+
+
+<h2>Posts</h2>
+
+{{#if postToEdit}}
+
+<h3>New Post</h3>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="inputPostTitle" class="col-sm-2 control-label">Title</label>
+		<div class="col-sm-10">
+			{{input type="text" class="form-control" id="inputPostTitle" placeholder="Title" value=postToEdit.title}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPostText" class="col-sm-2 control-label">Text</label>
+		<div class="col-sm-10">
+			{{textarea class="form-control" rows="3" id="inputPostText" placeholder="Text" value=postToEdit.text}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputPostAuthor" class="col-sm-2 control-label">Author</label>
+		<div class="col-sm-10">
+			{{input type="text" class="form-control" id="inputPostAuthor" placeholder="Author" value=postToEdit.author}}
+		</div>
+	</div>
+
+</form>
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-2">
+		<button class="btn btn-primary" {{action "save" "post"}}>Save</button>
+		<button class="btn btn-primary" {{action "cancel" "post" postToEdit}}>Cancel</button>
+	</div>
+</div>
+
+{{else}}
+	<button class="btn btn-primary" {{action "add" "post"}}>Add Post</button>
+{{/if}}
+
+<h4>Post List</h4>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Author</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each model.posts as |post|}}
+		<tr>
+			<td>{{post.title}}</td>
+			<td>{{post.author}}</td>
+			<td><button class="btn btn-primary" {{action "edit" "post" post}}>Edit</button></td>
+			<td><button class="btn btn-danger" {{action "delete" post}}>Delete</button></td>
 		</tr>
 	{{/each}}
 	</tbody>
