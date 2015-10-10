@@ -13,6 +13,7 @@
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
-    "medium-editor": "3.0.9"
+    "medium-editor": "3.0.9",
+    "moment": "momentjs#~2.10.6"
   }
 }

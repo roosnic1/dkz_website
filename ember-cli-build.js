@@ -9,6 +9,10 @@ module.exports = function(defaults) {
   app.import(app.bowerDirectory + '/bootstrap/dist/js/bootstrap.js');
   app.import(app.bowerDirectory + '/bootstrap/dist/css/bootstrap.css');
 
+  //import Moment.js
+  app.import(app.bowerDirectory + '/moment/moment.js');
+  app.import(app.bowerDirectory + '/moment/locale/de.js');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
