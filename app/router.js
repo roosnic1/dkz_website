@@ -9,7 +9,10 @@ Router.map(function() {
   this.route('plays');
   this.route('members');
   this.route('admin');
-  this.route('post',{path: 'posts/:post_id' });
+  this.route('posts', function() {
+  	this.route('post',{path: ':post_id' });
+  });
+
 });
 
 export default Router;

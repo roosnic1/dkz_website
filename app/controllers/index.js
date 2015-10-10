@@ -7,10 +7,9 @@ export default Ember.Controller.extend({
 	}),
 
 
-
 	actions: {
 		goToPost: function(id) {
-			this.transitionToRoute('post',id);
+			this.transitionToRoute('posts.post',id);
 		}
 	}
 });
