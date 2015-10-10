@@ -156,9 +156,9 @@
 <h3>New Post</h3>
 <form class="form-horizontal">
 	<div class="form-group">
-		<label for="inputPostTitle" class="col-sm-2 control-label">Title</label>
+		<label for="inputPostName" class="col-sm-2 control-label">Name</label>
 		<div class="col-sm-10">
-			{{input type="text" class="form-control" id="inputPostTitle" placeholder="Title" value=postToEdit.title}}
+			{{input type="text" class="form-control" id="inputPostName" placeholder="Name" value=postToEdit.name}}
 		</div>
 	</div>
 	<div class="form-group">
@@ -190,7 +190,7 @@
 <table class="table table-striped">
 	<thead>
 		<tr>
-			<th>Title</th>
+			<th>Name</th>
 			<th>Author</th>
 			<th>Edit</th>
 			<th>Delete</th>
@@ -199,7 +199,7 @@
 	<tbody>
 	{{#each model.posts as |post|}}
 		<tr>
-			<td>{{post.title}}</td>
+			<td>{{post.name}}</td>
 			<td>{{post.author}}</td>
 			<td><button class="btn btn-primary" {{action "edit" "post" post}}>Edit</button></td>
 			<td><button class="btn btn-danger" {{action "delete" post}}>Delete</button></td>
