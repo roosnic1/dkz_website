@@ -71,6 +71,40 @@ posit .collapsed-post {
 }
 
 
+playpre .title {
+	font-size: 40px;
+	line-height: 34px;
+	text-transform: uppercase;
+	letter-spacing: -0.5px;
+}
+
+playpre .separate {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border: 0;
+	border-top: 7px solid black;
+}
+
+playpre .year {
+	font-size: 30px;
+
+}
+
+playpre .info {
+
+}
+
+playpre .subtitle {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+playpre .description {
+	font-size: 22px;
+}
+
+
+
 /* ADMIN */
 
 
