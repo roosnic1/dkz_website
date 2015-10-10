@@ -2,8 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
 
+	tagName: 'posit',
+
+	collapsed: true,
+
 	created: Ember.computed('model.created',function() {
-		//return new Date(this.get('model.created')).toString();
 		return moment(this.get('model.created')).format('DD.MM.YYYY');
 	}),
 

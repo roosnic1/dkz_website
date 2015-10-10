@@ -64,6 +64,12 @@ header .nav-element {
 
 
 
+/* post-item Component */
+posit .collapsed-post {
+	max-height: 160px;
+	overflow: hidden;
+}
+
 
 /* ADMIN */
 
