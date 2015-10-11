@@ -23,6 +23,15 @@ export default Ember.Controller.extend({
 			});
 			this.set(type+'ToEdit',nType);
 		},
+		imageChanged: function(file,whereTo) {
+			console.log(file);
+			console.log(whereTo);
+			if(file.type.indexOf('image') > -1) {
+				this.set(whereTo,file.dataURL);
+			} else {
+				console.log('not an image');
+			}
+		},
 		save: function(type) {
 			// TODO: validate edits bevore save
 			var self = this;

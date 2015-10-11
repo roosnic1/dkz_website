@@ -55,6 +55,24 @@
 			{{input type="text" class="form-control" id="inputPlayMusic" placeholder="Music" value=playToEdit.music}}
 		</div>
 	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Background Image</label>
+		<div class="col-sm-5">
+			{{file-input fileChange="imageChanged" toValue="playToEdit.backImg"}}
+		</div>
+		<div class="col-sm-5">
+			<div class="image-preview" style="background-image: url({{playToEdit.backImg}});"></div>
+		</div>
+	</div>
+	<div class="form-group">
+		<label class="col-sm-2 control-label">Preview Image</label>
+		<div class="col-sm-5">
+			{{file-input fileChange="imageChanged" toValue="playToEdit.prevImg"}}
+		</div>
+		<div class="col-sm-5">
+			<div class="image-preview" style="background-image: url({{playToEdit.prevImg}});"></div>
+		</div>
+	</div>
 </form>
 <div class="row">
 	<div class="col-sm-offset-2 col-sm-2">
