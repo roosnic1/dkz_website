@@ -9,6 +9,8 @@ export default DS.Model.extend({
     writer: DS.attr('String'),
     orgWriter: DS.attr('String'),
     music: DS.attr('String'),
+    backImg: DS.attr('String'),
+    prevImg: DS.attr('String'),
     created: DS.attr('Number'),
     updated: DS.attr('Number')
 });
