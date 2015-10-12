@@ -58,6 +58,34 @@ header .nav-element {
 	padding: 25px;
 }
 
+/* index */
+.index-breaker {
+	height: 100px;
+}
+
+.index-play-gallery {
+	position: relative;
+}
+
+.index-play-gallery .action {
+	position: absolute;
+	height: 100%;
+	width: 120px;
+	top: 0;
+}
+
+.index-play-gallery .action:hover {
+	background-color: rgba(0,0,0,0.5);
+}
+
+.index-play-gallery .prev {
+	left: 0;
+}
+
+.index-play-gallery .next {
+	right: 0;
+}
+
 
 
 
