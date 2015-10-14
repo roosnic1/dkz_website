@@ -6,7 +6,7 @@ export default Ember.Route.extend({
 			plays: this.store.findAll('play'),
 			members: this.store.findAll('member'),
 			posts: this.store.findAll('post'),
-			historys: this.store.findAll('history')
+			histories: this.store.findAll('history')
 		});
 	}
 });

@@ -1,13 +1,32 @@
 <h2>News</h2>
 {{post-item model=newestPost action="goToPost"}}
 <div class="index-breaker"></div>
-<div class="index-play-gallery">
+<div class="index-gallery">
 	{{play-preview model=play}}
 	<div class="action prev" {{action 'nextPlay' true}}>
 		<i class="material-icons arrow">arrow_back</i>
 	</div>
 	<div class="action next" {{action 'nextPlay' false}}>
 		<i class="material-icons arrow">arrow_forward</i>
+	</div>
+</div>
+<div class="index-breaker"></div>
+<div class="index-history-wrapper">
+	<div class="row">
+		<div class="col-md-8">
+			<div class="index-gallery">
+				{{history-preview model=history}}
+				<div class="action prev" {{action 'nextHistory' true}}>
+					<i class="material-icons arrow">arrow_back</i>
+				</div>
+				<div class="action next" {{action 'nextHistory' false}}>
+					<i class="material-icons arrow">arrow_forward</i>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<h2>About us</h2>
+		</div>
 	</div>
 </div>
 {{outlet}}

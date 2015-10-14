@@ -63,11 +63,11 @@ header .nav-element {
 	height: 100px;
 }
 
-.index-play-gallery {
+.index-gallery {
 	position: relative;
 }
 
-.index-play-gallery .action {
+.index-gallery .action {
 	position: absolute;
 	height: 100%;
 	width: 120px;
@@ -77,25 +77,25 @@ header .nav-element {
 	align-items:center;
 }
 
-.index-play-gallery .action:hover {
+.index-gallery .action:hover {
 	background-color: rgba(0,0,0,0.5);
 }
 
-.index-play-gallery .action .arrow {
+.index-gallery .action .arrow {
 	display: none;
 	color: white;
 	font-size: 64px;
 }
 
-.index-play-gallery .action:hover .arrow{
+.index-gallery .action:hover .arrow{
 	display: block;
 }
 
-.index-play-gallery .prev {
+.index-gallery .prev {
 	left: 0;
 }
 
-.index-play-gallery .next {
+.index-gallery .next {
 	right: 0;
 }
 
@@ -111,7 +111,7 @@ posit .collapsed-post {
 	overflow: hidden;
 }
 
-
+/* play-preview Component */
 playpre .title {
 	font-size: 40px;
 	line-height: 34px;
@@ -152,6 +152,50 @@ playpre .image {
 }
 
 
+/* history-preview Component */
+
+histpre .header {
+	font-size: 30px;
+	color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+histpre .title {
+	font-size: 40px;
+	line-height: 34px;
+	letter-spacing: -0.5px;
+	color: white;
+    text-align: center;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: bold;
+}
+
+histpre .year {
+	font-size: 30px;
+	color: white;
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+histpre .text {
+	font-size: 25px;
+	margin-top: 25px;
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+    color: white;
+}
+
+histpre .background-image {
+	background-image: url('/assets/images/history_back.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 450px;
+}
 
 /* ADMIN */
 
