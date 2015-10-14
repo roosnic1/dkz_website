@@ -28,7 +28,8 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
     ENV.contentSecurityPolicy = {
       'connect-src': "'self' http://localhost:3000",
-      'style-src': "'self' 'unsafe-inline'",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'font-src': "'self' https://fonts.gstatic.com",
       'img-src': "'self' data:"
     };
   }
