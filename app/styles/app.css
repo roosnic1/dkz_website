@@ -72,10 +72,23 @@ header .nav-element {
 	height: 100%;
 	width: 120px;
 	top: 0;
+	display:flex;
+	justify-content:center;
+	align-items:center;
 }
 
 .index-play-gallery .action:hover {
 	background-color: rgba(0,0,0,0.5);
+}
+
+.index-play-gallery .action .arrow {
+	display: none;
+	color: white;
+	font-size: 64px;
+}
+
+.index-play-gallery .action:hover .arrow{
+	display: block;
 }
 
 .index-play-gallery .prev {
