@@ -13,6 +13,7 @@ Router.map(function() {
   	this.route('post',{path: ':post_id' });
   });
 
+  this.route('history');
 });
 
 export default Router;

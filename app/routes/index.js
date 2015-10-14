@@ -5,7 +5,8 @@ export default Ember.Route.extend({
 		return Ember.RSVP.hash({
 			plays: this.store.findAll('play'),
 			members: this.store.findAll('member'),
-			posts: this.store.findAll('post')
+			posts: this.store.findAll('post'),
+			historys: this.store.findAll('history')
 		});
 	}
 });

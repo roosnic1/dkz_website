@@ -226,6 +226,64 @@
 	</tbody>
 </table>
 
+<h2>Histories</h2>
+
+{{#if historyToEdit}}
+
+<h3>New History</h3>
+<form class="form-horizontal">
+	<div class="form-group">
+		<label for="inputHistoryTitle" class="col-sm-2 control-label">Title</label>
+		<div class="col-sm-10">
+			{{input type="text" class="form-control" id="inputHistoryTitle" placeholder="Title" value=historyToEdit.title}}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputHistoryText" class="col-sm-2 control-label">Text</label>
+		<div class="col-sm-10">
+			{{ medium-content-editable value=historyToEdit.text }}
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputHistoryYear" class="col-sm-2 control-label">Year</label>
+		<div class="col-sm-10">
+			{{input type="text" class="form-control" id="inputHistoryYear" placeholder="Year" value=historyToEdit.year}}
+		</div>
+	</div>
+
+</form>
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-2">
+		<button class="btn btn-primary" {{action "save" "history"}}>Save</button>
+		<button class="btn btn-primary" {{action "cancel" "history" postToEdit}}>Cancel</button>
+	</div>
+</div>
+
+{{else}}
+	<button class="btn btn-primary" {{action "add" "history"}}>Add History</button>
+{{/if}}
+
+<h4>History List</h4>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Title</th>
+			<th>Year</th>
+			<th>Edit</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+	{{#each model.histories as |history|}}
+		<tr>
+			<td>{{history.title}}</td>
+			<td>{{history.year}}</td>
+			<td><button class="btn btn-primary" {{action "edit" "history" history}}>Edit</button></td>
+			<td><button class="btn btn-danger" {{action "delete" history}}>Delete</button></td>
+		</tr>
+	{{/each}}
+	</tbody>
+</table>
 
 {{outlet}}
 

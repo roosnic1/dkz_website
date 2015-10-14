@@ -9,6 +9,7 @@ export default Ember.Controller.extend({
 	playToEdit: null,
 	memberToEdit: null,
 	postToEdit: null,
+	historyToEdit: null,
 
 	init: function() {
 		this._super();
@@ -57,24 +58,6 @@ export default Ember.Controller.extend({
 				console.warn('Could not delete item',err);
 			});
 		}
-		/*addImgToMember: function(base64) {
-			var img = this.store.createRecord('image',{
-				name: '',
-				description: '',
-				createdAt: new Date().getTime(),
-				imgData: base64
-			});
-			this.get('memberToEdit.images').addObject(img);
-		},
-		addImgToPlay: function(base64) {
-			var img = this.store.createRecord('image',{
-				name: '',
-				description: '',
-				createdAt: new Date().getTime(),
-				imgData: base64
-			});
-			this.get('playToEdit.images').addObject(img);
-		}*/
 	}
 
 
