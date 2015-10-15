@@ -221,6 +221,20 @@ histpre .background-image {
 	height: 450px;
 }
 
+/* postcard-form Component */
+.postcard-form {
+	background-image: url('/assets/images/postcard.jpg');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.postcard-form .welcome {
+	padding-top: 5%;
+    padding-left: 6%;
+    padding-right: 20%;
+    font-size: 20px;
+}
+
 
 
 
