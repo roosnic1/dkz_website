@@ -54,7 +54,7 @@ header .nav-element {
 
 .content-wrapper {
 	background-color: white;
-	border-radius: 25px;
+	/*border-radius: 25px;*/
 	padding: 25px;
 }
 
@@ -101,10 +101,12 @@ header .nav-element {
 
 .index-aboutus {
 	margin-left: 50px;
+	width: 245px;
 }
 
-.index-ttb {
-	width: 245px;
+.index-sponsor {
+	margin-left: 150px;
+	width: 300px;
 }
 
 .index-ttb .title {
