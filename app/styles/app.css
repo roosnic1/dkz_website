@@ -99,6 +99,28 @@ header .nav-element {
 	right: 0;
 }
 
+.index-aboutus {
+	margin-left: 50px;
+}
+
+.index-ttb {
+	width: 245px;
+}
+
+.index-ttb .title {
+	font-size: 30px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.index-ttb .text {
+	font-size: 22px;
+	margin-top: 20px;
+}
+
+.index-ttb .dkz-button {
+	margin-top: 30px;
+}
 
 
 
@@ -195,6 +217,19 @@ histpre .background-image {
 	background-size: cover;
 	background-repeat: no-repeat;
 	height: 450px;
+}
+
+
+
+
+/* DKZ Elements */
+
+.dkz-button {
+	width: 100%;
+    line-height: 35px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
 }
 
 /* ADMIN */

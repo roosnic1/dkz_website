@@ -13,7 +13,7 @@
 <div class="index-breaker"></div>
 <div class="index-history-wrapper">
 	<div class="row">
-		<div class="col-md-8">
+		<div class="col-md-7">
 			<div class="index-gallery">
 				{{history-preview model=history}}
 				<div class="action prev" {{action 'nextHistory' true}}>
@@ -24,8 +24,32 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-md-4">
-			<h2>About us</h2>
+		<div class="col-md-5">
+			<div class="index-aboutus index-ttb">
+				<div class="title">Über den Verein</div>
+				<div class="text">
+					„Die Kulisse Zug“ ist ein Laientheaterverein, der seit fünfzig Jahren das Zuger Kulturleben mit aussergewöhnlichen Theateraufführungen belebt. Diese Tradition wollen wir weiterführen.
+				</div>
+				{{link-to "Meht zum Verein" "aboutus" class="btn dkz-button"}}
+			</div>
+		</div>
+	</div>
+</div>
+<div class="index-breaker"></div>
+<div class="index-sponsor-wrapper">
+	<div class="row">
+		<div class="col-md-5">
+			<div class="index-aboutus index-ttb">
+				<div class="title">Gönner und Sponsoren</div>
+				<div class="text">
+					Die Kulisse Zug wird in erste Linie von den aktiven Mitgliedern getragen. Ohne deren Einsatz ist eine Theaterproduktion kaum zu realisieren. Zu denen die auf der Bühne spielen braucht es auch Mitspieler wie die öffentliche Hand, Unternehmen aus der Umgebung oder private Gönner die uns helfen die Produktionen umzusetzen.
+				</div>
+				{{link-to "Meht darüber erfahren" "aboutus" class="btn dkz-button"}}
+			</div>
+		</div>
+		<div class="col-md-7">
+			<div class="index-sponsor-list">
+			</div>
 		</div>
 	</div>
 </div>
