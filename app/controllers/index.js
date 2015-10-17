@@ -34,6 +34,11 @@ export default Ember.Controller.extend({
 				pi = this.get('model.histories.length') - 1;
 			}
 			this.set('historyIndex',pi);
+		},
+		saveFeedback: function(msg) {
+			msg.created = new Date().getTime();
+			msg.updated = new Date().getTime();
+			this.store.createRecord('feedback',msg).save();
 		}
 	}
 

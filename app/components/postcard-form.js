@@ -21,7 +21,7 @@ export default Ember.Component.extend({
 		setTimeout(function() {
 			console.log('executeTimeout');
 			self.set('notificationText','');
-		},5000);
+		},4000);
 	}),
 
 	msg: {},
@@ -54,6 +54,9 @@ export default Ember.Component.extend({
 				return;
 			}
 
+			this.sendAction('action',this.get('msg'));
+			this.set('notificationText','Danke für deine Nachricht.');
+			this.set('msg',{});
 		}
 	}
 
