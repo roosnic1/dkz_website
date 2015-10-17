@@ -226,6 +226,7 @@ histpre .background-image {
 	background-image: url('/assets/images/postcard.jpg');
 	background-size: contain;
 	background-repeat: no-repeat;
+	position: relative;
 }
 
 .postcard-form .welcome {
@@ -233,6 +234,42 @@ histpre .background-image {
     padding-left: 6%;
     padding-right: 20%;
     font-size: 20px;
+}
+
+.postcard-form .message {
+	margin-top: 5%;
+	margin-left: 6%;
+	background-color: transparent;
+    border: none;
+}
+
+.postcard-form .text-input {
+	margin-top: 5px;
+	display: block;
+    line-height: 30px;
+    margin-left: 6%;
+    width: 38.3%;
+    background-color: transparent;
+    border: none;
+}
+
+.postcard-form .send-button {
+	margin-left: 6%;
+	margin-top: 5px;
+	line-height: 30px;
+	width: 38.3%;
+	color: black;
+}
+
+.postcard-form .notification-text {
+	position: absolute;
+    top: 50%;
+    width: 100%;
+    line-height: 50px;
+    background-color: rgba(0,0,0,0.7);
+    text-align: center;
+    font-size: 40px;
+    color: white;
 }
 
 

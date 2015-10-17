@@ -1,3 +1,11 @@
 <div class="welcome">
 {{yield}}
 </div>
+<!-- TODO: get width and set cols and rows -->
+{{textarea value=msg.text class="message" cols="52" rows="20" placeholder="Nachricht"}}
+{{input type="text" value=msg.name class="text-input" placeholder="Name"}}
+{{input type="mail" value=msg.mail class="text-input" placeholder="Email"}}
+<a {{action 'send'}} class="btn send-button">Ab die Post</a>
+{{#if notificationText}}
+<div class="notification-text">{{notificationText}}</div>
+{{/if}}
