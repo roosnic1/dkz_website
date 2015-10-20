@@ -32,6 +32,24 @@ module.exports = function(environment) {
       'font-src': "'self' https://fonts.gstatic.com",
       'img-src': "'self' data:"
     };
+
+    ENV['simple-auth-token'] = {
+      serverTokenEndpoint: 'http://localhost:3000/get-token',
+      serverTokenRefreshEndpoint: 'http://localhost:3000/refresh-token',
+      timeFactor: 1000,
+      refreshLeeway: 60
+    };
+    ENV['simple-auth'] = {authorizer: 'simple-auth-authorizer:token'}
+
+    ENV['torii'] = {
+      providers: {
+        'google-oauth2-bearer': {
+          apiKey: '209246570631-df1muu96j4sji8hmsui77u88hdf0aknj.apps.googleusercontent.com',
+          redirectUri: 'http://localhost:4200'
+        }
+      }
+    }
+
   }
 
   if (environment === 'test') {
