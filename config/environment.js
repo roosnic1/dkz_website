@@ -33,13 +33,13 @@ module.exports = function(environment) {
       'img-src': "'self' data:"
     };
 
-    ENV['simple-auth-token'] = {
+    /*ENV['simple-auth-token'] = {
       serverTokenEndpoint: 'http://localhost:3000/get-token',
       serverTokenRefreshEndpoint: 'http://localhost:3000/refresh-token',
       timeFactor: 1000,
       refreshLeeway: 60
-    };
-    ENV['simple-auth'] = {authorizer: 'simple-auth-authorizer:token'}
+    };*/
+    ENV['ember-simple-auth'] = {authenticationRoute: 'admin'}
 
     ENV['torii'] = {
       providers: {

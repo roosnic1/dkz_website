@@ -1,9 +1,10 @@
 import Ember from 'ember';
-import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
 
 export default Ember.Route.extend({
+
 	session: Ember.inject.service('session'),
+
 
 	model: function() {
 		return Ember.RSVP.hash({
@@ -14,10 +15,18 @@ export default Ember.Route.extend({
 		});
 	},
 
-	init: function() {
-		this._super();
-		console.log('admin route init',this.get('session'));
+	setupController: function(controller, model) {
+		this.get('session').on('authneticationSucceeded',function() {
+				console.log('auth succeeded');
+			});
+		controller.set('model',model);
+		controller.set('session',this.get('session'));
 	},
+
+	/*init: function() {
+		this._super();
+		//console.log('admin route init',this.get('session'));
+	},*/
 
 	actions: {
 		logout: function() {

@@ -1,7 +1,8 @@
 import Ember from 'ember';
-import ApplicationRouteMixin from 'simple-auth/mixins/application-route-mixin';
+import ApplicationRouteMixin from 'ember-simple-auth/mixins/application-route-mixin';
 
 export default Ember.Route.extend(ApplicationRouteMixin,{
+	//session: Ember.inject.service('session'),
 
 
 	actions: {
@@ -10,8 +11,14 @@ export default Ember.Route.extend(ApplicationRouteMixin,{
 		},
 
 		sessionRequiresAuthentication: function() {
-			var session = this.get('session');
-			this.get('torii')
+			var self = this;
+			this.get('session').authenticate('authenticator:torii','google-oauth2-bearer').then(function(data) {
+				console.log('suc');
+			}, function(error) {
+				console.log(error);
+			});
+
+			/*this.get('torii')
 				.open('google-oauth2-bearer')
 				.then(function(googleAuth) {
 					var googleToken = googleAuth.authorizationToken.access_token;
@@ -26,7 +33,7 @@ export default Ember.Route.extend(ApplicationRouteMixin,{
 						});
 				},function(error) {
 					console.error('Google auth failed: ',error.message);
-				});
+				});*/
 		}
 	}
 });
