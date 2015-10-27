@@ -8,5 +8,6 @@ fi
 
 if [ "${TRAVIS_BRANCH}" = "development" ]; then
 	echo "Dev Branch"
+	ssh -i deploy deploy@vsg-xebaci.cyoncloud.com 'mkdir -p /var/www/html/dkz.gifstr.io/client'
 	scp -i deploy -r dist/* deploy@vsg-xebaci.cyoncloud.com:/var/www/html/dkz.gifstr.io/client
 fi
