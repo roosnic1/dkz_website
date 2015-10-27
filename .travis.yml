@@ -1,3 +1,8 @@
+branches:
+  only:
+    - master
+    - development
+
 language: node_js
 
 node_js:
@@ -23,3 +28,5 @@ install:
 
 script:
 - ember build --environment="production"
+
+after_success: ./deploy.sh
