@@ -10,6 +10,9 @@ node_js:
 
 sudo: false
 
+addons:
+  ssh_known_hosts: vsg-xebaci.cyoncloud.com
+
 cache:
   directories:
   - node_modules
