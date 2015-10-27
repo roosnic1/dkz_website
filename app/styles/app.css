@@ -169,6 +169,16 @@ footer .nav-element {
 	margin-top: 30px;
 }
 
+.index-sponsor-list {
+	margin-top: 80px;
+}
+
+.index-sponsor-list .img {
+	height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 
 
