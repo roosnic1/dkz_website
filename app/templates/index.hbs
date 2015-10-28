@@ -1,6 +1,11 @@
-<h2>News</h2>
-{{post-item model=newestPost action="goToPost"}}
-<div class="index-breaker"></div>
+{{#if newestPost }}
+	<div class="index-news">
+		<h2>News</h2>
+		{{post-item model=newestPost action="goToPost"}}
+	</div>
+	<div class="index-breaker"></div>
+{{/if}}
+
 <div class="index-gallery">
 	{{play-preview model=play}}
 	<div class="action prev" {{action 'nextPlay' true}}>
