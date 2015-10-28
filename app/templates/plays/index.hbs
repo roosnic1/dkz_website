@@ -1,0 +1,8 @@
+<div>
+{{#each model as |play|}}
+	{{play-preview model=play action="goToPlay"}}
+	<hr>
+{{/each}}
+</div>
+
+{{outlet}}

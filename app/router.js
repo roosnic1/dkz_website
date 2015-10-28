@@ -6,11 +6,13 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('plays');
+  this.route('plays', function() {
+    this.route('play',{ path: ':play_id' });
+  });
   this.route('members');
   this.route('admin');
   this.route('posts', function() {
-  	this.route('post',{path: ':post_id' });
+  	this.route('post',{ path: ':post_id' });
   });
 
   this.route('history');
