@@ -19,21 +19,23 @@ export default Ember.Controller.extend({
 	actions: {
 		nextPlay: function(back) {
 			var pi = this.get('playIndex');
-			if(!back && pi++ === this.get('model.plays.length')) {
+			back ? pi -= 1 : pi += 1;
+			if(!back && pi === this.get('model.plays.length')) {
 				pi = 0;
-			} else if(back && pi-- === 0) {
+			} else if(back && pi === -1) {
 				pi = this.get('model.plays.length') - 1;
 			}
 			this.set('playIndex',pi);
 		},
 		nextHistory: function(back) {
-			var pi = this.get('historyIndex');
-			if(!back && pi++ === this.get('model.histories.length')) {
-				pi = 0;
-			} else if(back && pi-- === 0) {
-				pi = this.get('model.histories.length') - 1;
+			var hi = this.get('historyIndex');
+			back ? hi -= 1 : hi += 1;
+			if(!back && hi === this.get('model.histories.length')) {
+				hi = 0;
+			} else if(back && hi === 0) {
+				hi = this.get('model.histories.length') - 1;
 			}
-			this.set('historyIndex',pi);
+			this.set('historyIndex',hi);
 		},
 		saveFeedback: function(msg) {
 			msg.created = new Date().getTime();
