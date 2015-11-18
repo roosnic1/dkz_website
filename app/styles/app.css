@@ -123,12 +123,13 @@ footer .nav-element {
 }
 
 .index-gallery .action:hover {
-	background-color: rgba(0,0,0,0.5);
+	/*background-color: rgba(0,0,0,0.5);*/
+	cursor: pointer;
 }
 
 .index-gallery .action .arrow {
 	display: none;
-	color: white;
+	color: blue;
 	font-size: 64px;
 }
 
@@ -186,8 +187,9 @@ footer .nav-element {
 
 /* post-item Component */
 posit .collapsed-post {
-	max-height: 160px;
+	max-height: 200px;
 	overflow: hidden;
+	cursor: pointer;
 }
 
 /* play-preview Component */
@@ -356,4 +358,22 @@ histpre .background-image {
 .image-preview-input {
 	width: 96%;
 	margin: 2%;
+}
+
+
+
+
+
+
+
+
+
+/* TEMP */
+
+.work-in-progress {
+	margin-bottom: 15px;
+}
+
+.work-in-progress div div {
+	background-color: #E4BC43;
 }
