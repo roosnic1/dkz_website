@@ -377,3 +377,22 @@ histpre .background-image {
 .work-in-progress div div {
 	background-color: #E4BC43;
 }
+
+.temp-footer {
+	margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.temp-footer div div {
+	color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.temp-footer div div a {
+	color: white;
+}
+
+.temp-footer div div a:hover {
+	text-decoration: none;
+}
