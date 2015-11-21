@@ -13,6 +13,10 @@ module.exports = function(defaults) {
   app.import(app.bowerDirectory + '/moment/moment.js');
   app.import(app.bowerDirectory + '/moment/locale/de.js');
 
+  //import contenttools
+  app.import('vendor/contenttools/content-tools.js');
+  app.import('vendor/contenttools/content-tools.min.css');
+
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
