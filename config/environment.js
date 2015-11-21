@@ -17,6 +17,9 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    googleAnalytics: {
+      webPropertyId: 'UA-XXXX-1'
     }
   };
 
@@ -30,7 +33,8 @@ module.exports = function(environment) {
       'connect-src': "'self' http://localhost:3000",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'font-src': "'self' https://fonts.gstatic.com",
-      'img-src': "'self' data:"
+      'img-src': "'self' data: https://www.google-analytics.com",
+      'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com"
     };
   }
 
@@ -52,7 +56,11 @@ module.exports = function(environment) {
       'connect-src': "'self'",
       'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
       'font-src': "'self' https://fonts.gstatic.com",
-      'img-src': "'self' data:"
+      'img-src': "'self' data: https://www.google-analytics.com",
+      'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com"
+    };
+    ENV.googleAnalytics = {
+      webPropertyId: 'UA-70453907-1'
     };
   }
 
