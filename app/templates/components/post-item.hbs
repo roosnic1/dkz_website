@@ -1,6 +1,11 @@
 {{yield}}
 <!--<h3>{{model.title}}</h3>-->
-<div class={{if collapsed 'collapsed-post'}}>
+<div class="text-main">
 {{{model.text}}}
 </div>
-<p class="text-right">Geschrieben am {{created}} von {{model.author}}</p>
+{{#if collapsed}}
+<div class="fade-out">
+	<h3 class="text-center read-more">weiterlesen...</h3>
+</div>
+{{/if}}
+<p class="text-right author">Geschrieben am {{created}} von {{model.author}}</p>

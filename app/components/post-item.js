@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
 	tagName: 'posit',
+	classNameBindings: ['collapsed:collapsed-post'],
 
 	collapsed: true,
 
