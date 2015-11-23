@@ -216,7 +216,7 @@ posit .fade-out .read-more {
 	margin-top: 10%;
 }
 
-posit .author {
+posit.collapsed-post .author {
 	position: absolute;
     width: 100%;
     height: 20px;
