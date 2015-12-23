@@ -9,11 +9,9 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 		goToPost: function(id) {
 			this.transitionTo('posts.post',id);
 		},
-<<<<<<< HEAD
 		goToPlay: function(id) {
 			this.transitionTo('plays.play',id);
-		}
-=======
+		},
 
 		sessionRequiresAuthentication: function() {
       var session = this.get('session');
@@ -46,6 +44,5 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
     printAuth: function() {
       console.log(this.get('session.isAuthenticated'));
     }
->>>>>>> dev-ouath
 	}
 });
