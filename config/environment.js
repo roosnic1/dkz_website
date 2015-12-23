@@ -34,8 +34,8 @@ module.exports = function(environment) {
     };
 
     ENV['ember-simple-auth-token'] = {
-      serverTokenEndpoint: 'http://localhost:3000/get-token',
-      serverTokenRefreshEndpoint: 'http://localhost:3000/refresh-token',
+      serverTokenEndpoint: '/auth/get-token',
+      serverTokenRefreshEndpoint: '/auth/refresh-token',
       timeFactor: 1000,
       refreshLeeway: 60
     };
