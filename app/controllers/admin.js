@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+
 	mediumEditorOptions: {
         "buttons": ["bold", "italic", "underline", "anchor", "h2", "h3", "quote"],
 	},
