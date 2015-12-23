@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('play',{ path: ':play_id' });
   });
   this.route('members');
-  //this.route('admin');
+  this.route('admin');
   this.route('posts', function() {
   	this.route('post',{ path: ':post_id' });
   });
