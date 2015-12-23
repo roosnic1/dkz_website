@@ -20,6 +20,18 @@ module.exports = function(environment) {
     },
     googleAnalytics: {
       webPropertyId: 'UA-XXXX-1'
+    },
+
+    // Auth Settings
+    'ember-simple-auth-token': {
+      serverTokenEndpoint: '/auth/get-token',
+      serverTokenRefreshEndpoint: '/auth/refresh-token',
+      timeFactor: 1000,
+      refreshLeeway: 60
+    },
+    'ember-simple-auth': {
+      authorizer: 'authorizer:token',
+      authenticationRoute: 'login'
     }
   };
 
@@ -35,18 +47,6 @@ module.exports = function(environment) {
       'font-src': "'self' https://fonts.gstatic.com",
       'img-src': "'self' data: https://www.google-analytics.com",
       'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com"
-    };
-
-    ENV['ember-simple-auth-token'] = {
-      serverTokenEndpoint: '/auth/get-token',
-      serverTokenRefreshEndpoint: '/auth/refresh-token',
-      timeFactor: 1000,
-      refreshLeeway: 60
-    };
-
-    ENV['ember-simple-auth'] = {
-      authorizer: 'authorizer:token',
-      authenticationRoute: 'login'
     };
 
     ENV['torii'] = {
@@ -69,6 +69,25 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
+  }
+
+  if (environment === 'preproduction') {
+    ENV.backendURL =  '';
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self'",
+      'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+      'font-src': "'self' https://fonts.gstatic.com",
+      'img-src': "'self' data: https://www.google-analytics.com",
+      'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com"
+    };
+    ENV['torii'] = {
+      providers: {
+        'google-oauth2-bearer': {
+          apiKey: '209246570631-df1muu96j4sji8hmsui77u88hdf0aknj.apps.googleusercontent.com',
+          redirectUri: 'https://dkz.gifstr.io'
+        }
+      }
+    };
   }
 
   if (environment === 'production') {
