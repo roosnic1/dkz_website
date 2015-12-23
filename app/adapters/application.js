@@ -6,5 +6,5 @@ import DataAdapterMixin from 'ember-simple-auth/mixins/data-adapter-mixin';
 export default DS.RESTAdapter.extend(DataAdapterMixin,{
 	host: ENV.backendURL,
 	namespace: 'api',
-	authorizer: 'authorizer:oauth2'
+	authorizer: 'authorizer:token'
 });

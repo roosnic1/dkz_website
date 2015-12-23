@@ -21,6 +21,20 @@
 
 <footer>
 	<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <a {{action 'logout'}}>Logout</a>
+        <a {{action 'printAuth'}}>Print</a>
+        {{#if session.isAuthenticated}}
+
+          {{#link-to 'admin'}}ADMIN{{/link-to}}
+        {{else}}
+          <a {{action 'sessionRequiresAuthentication'}}>Login</a>
+        {{/if}}
+
+        Session: {{ session.isAuthenticated }}
+      </div>
+    </div>
 		<div class="row">
 			<div class="col-md-4 col-sm-4 col-xs-12 col-md-offset-2 cold-sm-offset-2">
 				{{#link-to 'index'}}<div class="logo"></div>{{/link-to}}

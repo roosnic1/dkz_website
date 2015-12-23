@@ -1,9 +1,10 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'ember-simple-auth/mixins/authenticated-route-mixin';
 
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin,{
 
-	session: Ember.inject.service('session'),
+	//session: Ember.inject.service('session'),
 
 
 	model: function() {
@@ -16,6 +17,7 @@ export default Ember.Route.extend({
 	},
 
 	setupController: function(controller, model) {
+    console.log(this.get('session.isAuthenticated'));
 		this.get('session').on('authneticationSucceeded',function() {
 				console.log('auth succeeded');
 			});
@@ -23,17 +25,9 @@ export default Ember.Route.extend({
 		controller.set('session',this.get('session'));
 	},
 
-	/*init: function() {
+	init: function() {
 		this._super();
 		//console.log('admin route init',this.get('session'));
-	},*/
-
-	actions: {
-		logout: function() {
-			this.get('session').invalidate().then(function() {
-				console.log('logout');
-			});
-		}
 	}
 
 });

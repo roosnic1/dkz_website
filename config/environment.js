@@ -33,13 +33,17 @@ module.exports = function(environment) {
       'img-src': "'self' data:"
     };
 
-    /*ENV['simple-auth-token'] = {
+    ENV['ember-simple-auth-token'] = {
       serverTokenEndpoint: 'http://localhost:3000/get-token',
       serverTokenRefreshEndpoint: 'http://localhost:3000/refresh-token',
       timeFactor: 1000,
       refreshLeeway: 60
-    };*/
-    ENV['ember-simple-auth'] = {authenticationRoute: 'admin'}
+    };
+
+    ENV['ember-simple-auth'] = {
+      authorizer: 'authorizer:token',
+      authenticationRoute: 'application'
+    };
 
     ENV['torii'] = {
       providers: {
@@ -48,8 +52,7 @@ module.exports = function(environment) {
           redirectUri: 'http://localhost:4200'
         }
       }
-    }
-
+    };
   }
 
   if (environment === 'test') {

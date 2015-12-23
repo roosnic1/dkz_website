@@ -38,6 +38,7 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
     "ember-simple-auth": "1.0.1",
+    "ember-simple-auth-token": "git+https://github.com/jpadilla/ember-cli-simple-auth-token.git",
     "liquid-fire": "0.21.2",
     "torii": "0.6.1"
   }
