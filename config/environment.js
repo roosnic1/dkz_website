@@ -42,7 +42,7 @@ module.exports = function(environment) {
 
     ENV['ember-simple-auth'] = {
       authorizer: 'authorizer:token',
-      authenticationRoute: 'application'
+      authenticationRoute: 'login'
     };
 
     ENV['torii'] = {

@@ -16,6 +16,7 @@ Router.map(function() {
   this.route('history');
   this.route('aboutus');
   this.route('sponsor');
+  this.route('login');
 });
 
 export default Router;
