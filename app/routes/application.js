@@ -17,15 +17,17 @@ export default Ember.Route.extend(ApplicationRouteMixin, {
 				.then(function(googleAuth) {
 					var googleToken = googleAuth.authorizationToken.access_token;
 					console.log('Google authentication successful');
-
 					session
 						.authenticate('authenticator:jwt', {password: googleToken})
 						.then(function() {
 							console.log('custom token authentication successful!');
-						}, function(error) {
+              session.set('loginError','');
+						}).catch(function(error) {
+              session.set('loginError','Backend: ' + error);
 							console.log('custom token authentication failed!',error);
 						});
 				}, function(error) {
+          session.set('loginError','Google: ' + error.message);
 					console.error('Google auth failed: ',error.message);
 				});
 		},
