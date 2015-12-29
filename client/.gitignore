@@ -17,7 +17,7 @@ npm-debug.log
 testem.log
 *.sublime-workspace
 
-server/public/**
+public/**/
 dist
 client
 users.json
