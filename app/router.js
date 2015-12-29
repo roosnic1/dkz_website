@@ -11,7 +11,7 @@ Router.map(function() {
     this.route('play',{ path: ':play_id' });
   });
   this.route('members');
-  //this.route('admin');
+  this.route('admin');
   this.route('posts', function() {
   	this.route('post',{ path: ':post_id' });
   });
@@ -19,6 +19,7 @@ Router.map(function() {
   this.route('history');
   this.route('aboutus');
   this.route('sponsor');
+  this.route('login');
 });
 
 export default Router;
