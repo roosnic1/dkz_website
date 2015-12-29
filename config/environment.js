@@ -99,6 +99,14 @@ module.exports = function(environment) {
       'img-src': "'self' data: https://www.google-analytics.com",
       'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com"
     };
+    ENV['torii'] = {
+      providers: {
+        'google-oauth2-bearer': {
+          apiKey: '209246570631-df1muu96j4sji8hmsui77u88hdf0aknj.apps.googleusercontent.com',
+          redirectUri: 'http://dkzprod.appengine.flow.ch/'
+        }
+      }
+    };
     ENV.googleAnalytics = {
       webPropertyId: 'UA-70453907-1'
     };
