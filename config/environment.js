@@ -102,7 +102,7 @@ module.exports = function(environment) {
     ENV['torii'] = {
       providers: {
         'google-oauth2-bearer': {
-          apiKey: '209246570631-df1muu96j4sji8hmsui77u88hdf0aknj.apps.googleusercontent.com',
+          apiKey: '209246570631-qgghhgojm82h299oueg08a00egkua528.apps.googleusercontent.com',
           redirectUri: 'http://dkzprod.appengine.flow.ch/'
         }
       }
