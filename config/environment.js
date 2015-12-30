@@ -103,7 +103,7 @@ module.exports = function(environment) {
       providers: {
         'google-oauth2-bearer': {
           apiKey: '209246570631-qgghhgojm82h299oueg08a00egkua528.apps.googleusercontent.com',
-          redirectUri: 'http://dkzprod.appengine.flow.ch/'
+          redirectUri: 'http://dkzprod.appengine.flow.ch'
         }
       }
     };
